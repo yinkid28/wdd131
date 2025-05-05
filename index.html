@@ -1,11 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals. Your Full Name. Personal website with project links and scripture." />
+  <meta name="author" content="Adeyinka Adedayo" />
+  <title>WDD 131 – Dynamic Web Fundamentals - Adeyinka Adedayo</title>
+  <link rel="stylesheet" href="styles/base.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
-    <h1>WDD 131 - Yinka's</h1>
+  <header>
+    <h1>WDD 131: Dynamic Web Fundamentals - Adeyinka Adedayo</h1>
+    <nav>
+      <a href="https://www.linkedin.com/in/adeyinka-adedayo-931548263/">LinkedIn</a>
+      <a href="https://byupw.instructure.com/">Canvas</a>
+      <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/rom/12?lang=eng">Scripture</a>
+      <a href="#">Final Project</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>About Me</h2>
+      <div class="card-content">
+        <img src="images/my-profile-pic.jpg" alt="Your photo" />
+        <p>
+          I am a dedicated web development student with a strong interest in front-end technologies,
+          including HTML, CSS, and JavaScript. I enjoy solving problems through clean and efficient
+          code and take pride in building websites that are both functional and visually appealing.
+          With each project, I aim to improve my skills and deepen my understanding of modern web design principles.
+          I am also committed to following web standards, accessibility best practices, and continuously growing as a developer.
+        </p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Nigeria</h2>
+      <div class="card-content">
+        <img src="images/naija-pic.jpg" alt="Map or photo of Nigeria" />
+        <p>
+          Nigeria is a vibrant and diverse country in West Africa, known for its rich cultural heritage,
+          booming music and film industries, and large population. It is home to over 200 million people
+          and a variety of ethnic groups and languages.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Adeyinka Adedayo | Ogun state, Nigeria.</p>
+    <p id="lastModified"></p>
+  </footer>
 </body>
 </html>
