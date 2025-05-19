@@ -1,83 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Adeyinka Adedayo" />
-    <title>Madagascar - Island Paradise</title>
-    <meta name="description" content="Explore Madagascar, a stunning island paradise known for its extraordinary biodiversity, unique wildlife such as lemurs, vibrant cultures, 
-    pristine beaches, and lush rainforests. Discover its rich history, diverse languages, and natural wonders that make it one of the world's most captivating travel destinations">
-    <link rel="stylesheet" href="styles/place.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <script src="scripts/windchill.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Adeyinka Adedayo" />
+  <title>Madagascar - Island Paradise</title>
+  <meta name="description" content="Explore Madagascar, a stunning island paradise known for its extraordinary biodiversity, unique wildlife such as lemurs, vibrant cultures, pristine beaches, and lush rainforests. Discover its rich history, diverse languages, and natural wonders that make it one of the world's most captivating travel destinations." />
+  <link rel="stylesheet" href="styles/place.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+  <script src="scripts/windchill.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Madagascar</h1>
-    </header>
-    <main>
-        <div class="hero">
-            <picture>
-                <source srcset="images/madagascar-small.webp" media="(max-width: 600px)">
-                <source srcset="images/madagascar-medium.webp" media="(max-width: 1024px)">
-                <img src="images/madagascar-large.webp" alt="Lemurs of Madagascar" width="1200" height="800">
-            </picture>
+  <header>
+    <h1>Madagascar</h1>
+  </header>
+
+  <main>
+    <section class="hero">
+      <picture>
+        <source srcset="images/madagascar-small.webp" media="(max-width: 600px)" />
+        <source srcset="images/madagascar-medium.webp" media="(max-width: 1024px)" />
+        <img src="images/madagascar.webp" alt="Lemurs of Madagascar" width="1200" height="800" />
+      </picture>
+
+      <div class="info-container">
+        <div class="data-card">
+          <h2>Data</h2>
+          <dl>
+            <dt>Area:</dt><dd>587,041 sq km</dd>
+            <dt>Population:</dt><dd>27,691,018</dd>
+            <dt>Capital:</dt><dd>Antananarivo</dd>
+            <dt>Languages:</dt><dd>Malagasy, French</dd>
+            <dt>Currency:</dt><dd>Malagasy Ariary</dd>
+            <dt>Time Zone:</dt><dd>UTC+3</dd>
+            <dt>Calling Code:</dt><dd>+261</dd>
+            <dt>Internet TLD:</dt><dd>.mg</dd>
+          </dl>
         </div>
-        
-        <section class="info-container">
-            <div class="data-card">
-                <h2>Data</h2>
-                <dl>
-                    <dt>Area:</dt>
-                    <dd>587,041 sq km</dd>
-                    
-                    <dt>Population:</dt>
-                    <dd>27,691,018</dd>
-                    
-                    <dt>Capital:</dt>
-                    <dd>Antananarivo</dd>
-                    
-                    <dt>Languages:</dt>
-                    <dd>Malagasy, French</dd>
-                    
-                    <dt>Currency:</dt>
-                    <dd>Malagasy Ariary</dd>
-                    
-                    <dt>Time Zone:</dt>
-                    <dd>UTC+3</dd>
-                    
-                    <dt>Calling Code:</dt>
-                    <dd>+261</dd>
-                    
-                    <dt>Internet TLD:</dt>
-                    <dd>.mg</dd>
-                </dl>
-            </div>
-            
-            <div class="weather-card">
-                <h2>Weather</h2>
-                <div class="weather-icon">
-                    <img src="images/partly-cloudy.svg" alt="Partly Cloudy" class="mobile-weather-icon">
-                </div>
-                <dl>
-                    <dt>Temperature:</dt>
-                    <dd id="temperature">10 °C</dd>
-                    
-                    <dt>Conditions:</dt>
-                    <dd>Partly Cloudy</dd>
-                    
-                    <dt>Wind:</dt>
-                    <dd id="wind-speed">5 km/h</dd>
-                    
-                    <dt>Wind Chill:</dt>
-                    <dd id="wind-chill">Calculating...</dd>
-                </dl>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy;<span id="current-year"></span> 🌺 Your Name 🌺 Madagascar</p>
-        <p>Last Modification: <span id="last-modified"></span></p>
-    </footer>
+
+        <div class="weather-card">
+          <h2>Weather</h2>
+          <div class="weather-icon">
+            <img src="images/partly-cloudy.svg" alt="Partly Cloudy" class="mobile-weather-icon" />
+          </div>
+          <dl>
+            <dt>Temperature:</dt><dd id="temperature">10 °C</dd>
+            <dt>Conditions:</dt><dd>Partly Cloudy</dd>
+            <dt>Wind:</dt><dd id="wind-speed">5 km/h</dd>
+            <dt>Wind Chill:</dt><dd id="wind-chill">Calculating...</dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy;<span id="current-year"></span> 🌺 Your Name 🌺 Madagascar</p>
+    <p>Last Modification: <span id="last-modified"></span></p>
+  </footer>
 </body>
 </html>
