@@ -1,28 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="author" content="Adeyinka Adedayo" />
-  <title>Madagascar - Island Paradise</title>
-  <meta name="description" content="Explore Madagascar, a stunning island paradise known for its extraordinary biodiversity, unique wildlife such as lemurs, vibrant cultures, pristine beaches, and lush rainforests. Discover its rich history, diverse languages, and natural wonders that make it one of the world's most captivating travel destinations." />
-  <link rel="stylesheet" href="styles/place.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Your Name Here">
+  <title>Madagascar - Biodiversity Paradise</title>
+  <meta name="description" content="Explore Madagascar, a biodiversity paradise known for its unique lemurs, beautiful landscapes, and rich cultural heritage. Discover essential travel information about this extraordinary island nation.">
+  <link rel="stylesheet" href="styles/place.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
   <script src="scripts/windchill.js" defer></script>
 </head>
 <body>
   <header>
     <h1>Madagascar</h1>
   </header>
-
+  
   <main>
     <section class="hero">
       <picture>
-        <source srcset="images/madagascar-small.webp" media="(max-width: 600px)" />
-        <source srcset="images/madagascar-medium.webp" media="(max-width: 1024px)" />
-        <img src="images/madagascar.webp" alt="Lemurs of Madagascar" width="1200" height="800" />
+        <source srcset="images/madagascar-small.webp" media="(max-width: 600px)">
+        <source srcset="images/madagascar-medium.webp" media="(max-width: 1024px)">
+        <img src="images/madagascar.webp" alt="Lemur in its natural habitat in Madagascar" width="1200" height="800">
       </picture>
-
+      
       <div class="info-container">
         <div class="data-card">
           <h2>Data</h2>
@@ -37,26 +39,26 @@
             <dt>Internet TLD:</dt><dd>.mg</dd>
           </dl>
         </div>
-
+        
         <div class="weather-card">
           <h2>Weather</h2>
           <div class="weather-icon">
-            <img src="images/partly-cloudy.svg" alt="Partly Cloudy" class="mobile-weather-icon" />
+            <img src="images/partly-cloudy.svg" alt="Partly Cloudy" class="mobile-weather-icon">
           </div>
           <dl>
             <dt>Temperature:</dt><dd id="temperature">10 °C</dd>
             <dt>Conditions:</dt><dd>Partly Cloudy</dd>
             <dt>Wind:</dt><dd id="wind-speed">5 km/h</dd>
-            <dt>Wind Chill:</dt><dd id="wind-chill">Calculating...</dd>
+            <dt>Wind Chill:</dt><dd id="wind-chill">9.8 °C</dd>
           </dl>
         </div>
       </div>
     </section>
   </main>
-
+  
   <footer>
-    <p>&copy;<span id="current-year"></span> 🌺 Your Name 🌺 Madagascar</p>
-    <p>Last Modification: <span id="last-modified"></span></p>
+    <p>&copy;<span id="current-year">2024</span> 🌺 Your Name 🌺 Madagascar</p>
+    <p>Last Modification: <span id="last-modified">02/08/2024 22:47:47</span></p>
   </footer>
 </body>
 </html>
