@@ -1,0 +1,165 @@
+/* Global CSS Variables */
+:root {
+    --primary-color: #ce1126;    /* Red from Madagascar flag */
+    --secondary-color: #007e3a;  /* Green from Madagascar flag */
+    --accent-color: #ffffff;     /* White from Madagascar flag */
+    --text-color: #333333;
+    --background-color: #f9f9f9;
+    --card-background: rgba(255, 255, 255, 0.9);
+    --card-border: 1px solid #ddd;
+    --card-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    --card-padding: 1.5rem;
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-heading: 'Arial', sans-serif;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+}
+
+header::after {
+    content: "";
+    display: block;
+    height: 10px;
+    background-color: var(--secondary-color);
+}
+
+h1 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+}
+
+/* Hero Image */
+.hero {
+    width: 100%;
+    max-height: 600px;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Info Container - Mobile First */
+.info-container {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Card Styles */
+.data-card, .weather-card {
+    background-color: var(--card-background);
+    border: var(--card-border);
+    border-radius: 4px;
+    box-shadow: var(--card-shadow);
+    padding: var(--card-padding);
+}
+
+h2 {
+    font-family: var(--font-heading);
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+}
+
+/* Data List Styles */
+dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5rem 1rem;
+}
+
+dt {
+    font-weight: bold;
+    text-align: right;
+}
+
+dd {
+    text-align: left;
+}
+
+/* Weather Icon Styles */
+.weather-icon {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.mobile-weather-icon {
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Weather Pseudo Element for Desktop */
+.weather-card h2::after {
+    content: "";
+    display: none; /* Hidden by default, shown in media query */
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+/* Media Query for Larger Screens */
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+    
+    .info-container {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2rem;
+    }
+    
+    .data-card, .weather-card {
+        width: 48%;
+    }
+    
+    /* Show Weather Emoticon on Desktop */
+    .mobile-weather-icon {
+        display: none;
+    }
+    
+    .weather-card h2::after {
+        content: "⛅";
+        display: inline-block;
+        margin-left: 0.5rem;
+        font-size: 1.5rem;
+    }
+}
