@@ -42,8 +42,13 @@
         
         <div class="weather-card">
           <h2>Weather</h2>
+          <!-- Desktop view doesn't need an icon since we use the emoticon -->
           <div class="weather-icon">
-            <img src="images/partly-cloudy.svg" alt="Partly Cloudy" class="mobile-weather-icon">
+            <!-- No image here, we use the emoticon in h2::after for desktop -->
+          </div>
+          <!-- Mobile weather icon (hidden on desktop) -->
+          <div class="mobile-weather-icon">
+            <img src="images/partly-cloudy.svg" alt="Partly Cloudy">
           </div>
           <dl>
             <dt>Temperature:</dt><dd id="temperature">10 °C</dd>
