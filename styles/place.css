@@ -103,6 +103,7 @@ h1 {
 /* Definition list layout */
 dl {
   display: grid;
+  margin-top: 1rem;
   grid-template-columns: auto 1fr;
   gap: 0.3rem 1rem;
 }
