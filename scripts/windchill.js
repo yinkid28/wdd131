@@ -1,28 +1,37 @@
-// Set current year and last modified date in the footer
-document.getElementById('current-year').textContent = new Date().getFullYear();
-document.getElementById('last-modified').textContent = document.lastModified;
+// windchill.js - Calculate the wind chill factor
 
-// Get temperature and wind speed values from the page
-const temperature = parseFloat(document.getElementById('temperature').textContent);
-const windSpeed = parseFloat(document.getElementById('wind-speed').textContent);
-
-// Function to calculate wind chill
-function calculateWindChill(temp, wind) {
-    return 13.12 + 0.6215 * temp - 11.37 * Math.pow(wind, 0.16) + 0.3965 * temp * Math.pow(wind, 0.16);
-}
-
-// Display the wind chill
-window.addEventListener('load', () => {
-    // Get the wind chill element
-    const windChillElement = document.getElementById('wind-chill');
+// Wait for the DOM to be fully loaded
+document.addEventListener("DOMContentLoaded", function() {
+    // Get the temperature and wind speed elements
+    const tempElement = document.getElementById("temperature");
+    const windElement = document.getElementById("wind-speed");
+    const chillElement = document.getElementById("wind-chill");
     
-    // Check if conditions are met for wind chill calculation (metric)
-    if (temperature <= 10 && windSpeed > 4.8) {
-        // Calculate and display wind chill
-        const windChill = calculateWindChill(temperature, windSpeed);
-        windChillElement.textContent = windChill.toFixed(1) + " °C";
+    // Extract the numeric values
+    const temp = parseFloat(tempElement.textContent);
+    const windSpeed = parseFloat(windElement.textContent);
+    
+    // Check if conditions are met for wind chill calculation
+    // Temperature must be <= 10°C and wind speed > 4.8 km/h
+    if (temp <= 10 && windSpeed > 4.8) {
+        // Calculate wind chill using the formula
+        const windChill = calculateWindChill(temp, windSpeed);
+        
+        // Display the result
+        chillElement.textContent = `${windChill.toFixed(1)} °C`;
     } else {
-        // Display N/A if conditions are not met
-        windChillElement.textContent = "N/A";
+        // If conditions aren't met, display N/A
+        chillElement.textContent = "N/A";
     }
+    
+    // Set the current year in the footer
+    document.getElementById("current-year").textContent = new Date().getFullYear();
+    
+    // Set the last modified date in the footer
+    document.getElementById("last-modified").textContent = document.lastModified;
 });
+
+// The wind chill calculation function - one line as required
+function calculateWindChill(temp, windSpeed) {
+    return 13.12 + 0.6215 * temp - 11.37 * Math.pow(windSpeed, 0.16) + 0.3965 * temp * Math.pow(windSpeed, 0.16);
+}

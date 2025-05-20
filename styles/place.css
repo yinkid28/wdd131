@@ -138,7 +138,7 @@
     margin-top: 0; /* Remove margin since we're stacking elements vertically */
   }
   
-  /* Responsive adjustments */
+  /* Media Query for Desktop View */
   @media screen and (min-width: 768px) {
     h1 {
       font-size: 3rem;
@@ -182,10 +182,12 @@
       left: -1.5rem;
     }
     
+    /* Hide SVG in desktop view */
     .mobile-weather-icon {
       display: none;
     }
     
+    /* Show emoticon only in desktop view */
     .weather-card h2::after {
       content: " ⛅";
       font-size: 1.2rem;
