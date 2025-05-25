@@ -1,0 +1,267 @@
+/* filtered-temples.css */
+/* Mobile-first CSS for Filtered Temple Album */
+:root {
+    --primary-color: #4A148C;
+    --secondary-color: #7B1FA2;
+    --text-color: #FFFFFF;
+    --background-color: #F3E5F5;
+    --dark-text: #333333;
+    --card-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    --hover-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--dark-text);
+}
+
+/* Header Styles */
+header {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 1rem;
+}
+
+header h1 {
+    margin: 0;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Navigation Styles */
+nav {
+    position: relative;
+}
+
+.hamburger {
+    display: block;
+    position: absolute;
+    top: -40px;
+    right: 0;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.hamburger .close-icon {
+    display: none;
+}
+
+.hamburger.active .hamburger-icon {
+    display: none;
+}
+
+.hamburger.active .close-icon {
+    display: block;
+}
+
+.nav-menu {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+    text-align: center;
+}
+
+.nav-menu.show {
+    display: block;
+}
+
+.nav-menu li {
+    margin: 10px 0;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 8px 15px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    background-color: var(--secondary-color);
+}
+
+/* Main Content Styles */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+main h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+/* Temple Grid */
+.temple-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+/* Temple Card Styles */
+.temple-card {
+    background-color: white;
+    box-shadow: var(--card-shadow);
+    margin: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.temple-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--hover-shadow);
+}
+
+.temple-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.temple-card:hover img {
+    transform: scale(1.05);
+}
+
+.temple-info {
+    padding: 1.5rem;
+}
+
+.temple-name {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 0 0 1rem 0;
+    text-align: center;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+}
+
+.temple-details {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.detail-item:last-child {
+    border-bottom: none;
+}
+
+.detail-label {
+    font-weight: 600;
+    color: var(--dark-text);
+    flex: 1;
+}
+
+.detail-value {
+    color: var(--secondary-color);
+    font-weight: 500;
+    flex: 1;
+    text-align: right;
+}
+
+/* Loading and Empty States */
+.loading {
+    text-align: center;
+    padding: 3rem;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.no-temples {
+    text-align: center;
+    padding: 3rem;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    margin: 2rem 0;
+}
+
+.no-temples h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Animation delays for staggered effect */
+.temple-card:nth-child(1) { animation-delay: 0.1s; }
+.temple-card:nth-child(2) { animation-delay: 0.2s; }
+.temple-card:nth-child(3) { animation-delay: 0.3s; }
+.temple-card:nth-child(4) { animation-delay: 0.4s; }
+.temple-card:nth-child(5) { animation-delay: 0.5s; }
+.temple-card:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    margin-top: 3rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+/* Ensure proper focus states for accessibility */
+.nav-menu a:focus,
+.hamburger:focus {
+    outline: 2px solid var(--text-color);
+    outline-offset: 2px;
+}
+
+.temple-card:focus-within {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+@media screen and (max-width: 480px) {
+    .temple-info {
+        padding: 1rem;
+    }
+    
+    .detail-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
+    
+    .detail-value {
+        text-align: left;
+    }
+    
+    .temple-name {
+        font-size: 1.2rem;
+    }
+}

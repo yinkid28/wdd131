@@ -1,0 +1,105 @@
+/* filtered-temples-large.css */
+/* Large Screen Styles */
+@media screen and (min-width: 800px) {
+    /* Hide hamburger menu on large screens */
+    .hamburger {
+        display: none;
+    }
+
+    /* Show navigation menu on large screens */
+    .nav-menu {
+        display: flex;
+        justify-content: center;
+        margin: 1rem 0 0;
+        gap: 1rem;
+    }
+
+    .nav-menu li {
+        margin: 0;
+    }
+
+    .nav-menu a {
+        padding: 10px 20px;
+        border-radius: 25px;
+        font-weight: 600;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .nav-menu a::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg, var(--secondary-color), #8E24AA);
+        transition: left 0.3s ease;
+        z-index: -1;
+    }
+
+    .nav-menu a:hover::before,
+    .nav-menu a.active::before {
+        left: 0;
+    }
+
+    .nav-menu a:hover,
+    .nav-menu a.active {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    /* Temple Grid for Large Screens */
+    .temple-grid {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+    }
+
+    /* Enhanced hover effects for larger screens */
+    .temple-card {
+        cursor: pointer;
+    }
+
+    .temple-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+
+    /* Better spacing for larger screens */
+    main {
+        padding: 2rem;
+    }
+
+    .temple-info {
+        padding: 2rem;
+    }
+
+    .temple-name {
+        font-size: 1.5rem;
+    }
+
+    /* Improved detail layout for larger screens */
+    .detail-item {
+        padding: 0.75rem 0;
+    }
+
+    .detail-label {
+        font-size: 1rem;
+    }
+
+    .detail-value {
+        font-size: 1rem;
+    }
+}
+
+/* Extra large screens */
+@media screen and (min-width: 1200px) {
+    .temple-grid {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1400px;
+    }
+
+    main {
+        max-width: 1400px;
+    }
+}
