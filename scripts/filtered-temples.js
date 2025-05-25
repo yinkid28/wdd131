@@ -41,7 +41,7 @@ const temples = [
         location: "Lima, Perú",
         dedicated: "1986, January, 10",
         area: 9600,
-        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/lima-peru/400x250/lima-peru-temple-evening-view-787204-wallpaper.jpg"
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/lima-peru/800x500/lima-peru-mormon-temple-911889-wallpaper.jpg"
     },
     {
         templeName: "Mexico City Mexico",
@@ -63,7 +63,7 @@ const temples = [
         location: "Rome, Italy",
         dedicated: "2019, March, 10",
         area: 40500,
-        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rome-italy/2019/400x250/3-Rome-Temple-2190090.jpg"
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rome-italy/2019/800x500/1-Rome-Temple-2160936.jpg"
     },
     {
         templeName: "Provo City Center",
@@ -77,14 +77,14 @@ const temples = [
         location: "Preston, England",
         dedicated: "1998, June, 7",
         area: 69630,
-        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/preston-england/400x250/preston-england-temple-lds-130635-wallpaper.jpg"
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/preston-england/800x500/preston-temple-762730-wallpaper.jpg"
     },
     {
         templeName: "Tokyo Japan",
         location: "Tokyo, Japan",
         dedicated: "1980, October, 27",
         area: 53997,
-        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/tokyo-japan/400x250/tokyo_japan_temple_night_1075606_wallpaper.jpg"
+        imageUrl: "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/tokyo-japan/800x500/tokyo_japan_temple-entry.jpeg"
     }
 ];
 
