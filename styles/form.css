@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
     background: linear-gradient(135deg, #2e3c78 0%, #7e54a8 100%);
@@ -101,12 +101,11 @@ textarea {
     padding: 0.5rem;
 }
 
-.rating-group input[type="radio"]:checked ~ label,
-.rating-group label:hover {
+.rating-group input[type="radio"]:checked + label {
     color: #9a8300;
 }
 
-.rating-group input[type="radio"]:checked + label {
+.rating-group label:hover {
     color: #9a8300;
 }
 
