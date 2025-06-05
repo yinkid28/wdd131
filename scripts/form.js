@@ -47,7 +47,7 @@ function setupRatingSystem() {
         input.addEventListener('change', () => {
             // Reset all labels
             ratingLabels.forEach(label => {
-                label.style.color = '#ddd';
+                label.style.color = '#3c3b3b';
             });
             
             // Highlight selected rating and all previous ones
@@ -69,7 +69,7 @@ function setupRatingSystem() {
         label.addEventListener('mouseleave', () => {
             // Reset to current selection
             const checkedInput = document.querySelector('input[name="rating"]:checked');
-            ratingLabels.forEach(l => l.style.color = '#ddd');
+            ratingLabels.forEach(l => l.style.color = '#3c3b3b');
             
             if (checkedInput) {
                 const checkedIndex = Array.from(ratingInputs).indexOf(checkedInput);

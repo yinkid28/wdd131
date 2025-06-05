@@ -175,7 +175,7 @@ footer {
 
 .success-icon {
     font-size: 4rem;
-    color: #27ae60;
+    color: #013517;
     margin-bottom: 1rem;
 }
 
@@ -186,7 +186,7 @@ footer {
 }
 
 .review-summary {
-    background: #f8f9fa;
+    background: #fcf8f8;
     border-radius: 10px;
     padding: 2rem;
     margin: 2rem 0;
@@ -226,7 +226,7 @@ footer {
 }
 
 .counter-display {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #2e3c78 0%, #7e54a8 100%);
     color: white;
     padding: 1.5rem;
     border-radius: 10px;
@@ -260,7 +260,7 @@ footer {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #2e3c78 0%, #7e54a8 100%);
     color: white;
 }
 
@@ -275,7 +275,7 @@ footer {
 }
 
 .rating-stars {
-    color: #ffd700;
+    color: #897000;
     font-size: 1.2rem;
 }
 
