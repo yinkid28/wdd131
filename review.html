@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Submitted - Thank You!</title>
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+<body>
+    <div class="container">
+        <div class="confirmation-container">
+            <div class="success-icon">✅</div>
+            <h1>Review Submitted Successfully!</h1>
+            <p class="message">Thank you for taking the time to share your valuable feedback with us.</p>
+
+            <div class="review-summary">
+                <div class="summary-title">Review Summary</div>
+                <div id="reviewDetails">
+                    <!-- Review details will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <div class="counter-display">
+                <div>Total Reviews Completed</div>
+                <div class="counter-number" id="reviewCounter">0</div>
+                <div>Thank you for your continued feedback!</div>
+            </div>
+
+            <div class="action-buttons">
+                <a href="form.html" class="btn btn-primary">Submit Another Review</a>
+                <button onclick="window.history.back()" class="btn btn-secondary">Go Back</button>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <p>&copy;2024 🌸 Rubia Magdelena Francesco 🌸</p>
+                <p>Madagascar</p>
+                <p>Last Modification: <span id="lastModified"></span></p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="scripts/review.js"></script>
+</body>
+</html>
